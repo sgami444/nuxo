@@ -1,0 +1,16 @@
+{
+  "name": "nuxo-care-github-pages",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static mirror/deployment helper for the Nuxo Care Emergent preview site.",
+  "scripts": {
+    "scrape": "node scripts/scrape-site.mjs",
+    "serve": "npx serve dist",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.1",
+    "serve": "^14.2.4"
+  }
+}
