@@ -1,4 +1,4 @@
-name: Scrape Emergent preview and deploy to GitHub Pages
+﻿name: Build and deploy NUXO site to GitHub Pages
 
 on:
   push:
@@ -31,16 +31,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm ci
 
-      - name: Install Playwright Chromium
-        run: npx playwright install --with-deps chromium
-
-      - name: Scrape static site
-        run: npm run scrape
-        env:
-          SOURCE_URL: https://nuxo-care.preview.emergentagent.com/
-          CUSTOM_DOMAIN: nuxo.in
+      - name: Build site
+        run: npm run build
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

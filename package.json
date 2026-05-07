@@ -1,16 +1,20 @@
 {
-  "name": "nuxo-care-github-pages",
+  "name": "nuxo-care-landing",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Static mirror/deployment helper for the Nuxo Care Emergent preview site.",
+  "description": "Static Vite React landing page for Nuxo Care.",
   "scripts": {
-    "scrape": "node scripts/scrape-site.mjs",
-    "serve": "npx serve dist",
-    "clean": "rm -rf dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview"
   },
-  "devDependencies": {
-    "playwright": "^1.49.1",
-    "serve": "^14.2.4"
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "^5.4.0"
   }
 }
